@@ -1,0 +1,299 @@
+/* Large Devices, Wide Screens*/
+@media only screen and (max-width : 1199.98px) {
+.navbar-nav .nav-item .nav-link {
+	padding: 37px 17px;
+}
+.sec-title.w-200 {
+	width: 160%;
+}
+.post-slideshow .post-button-next {
+	right: -50px;
+}
+.post-slideshow .post-button-prev {
+	left: -50px;
+}
+.post-slideshow .owl-nav {
+	text-align: center;
+	margin-top: 40px;
+}
+.post-slideshow .owl-nav .owl-next, .post-slideshow .owl-nav .owl-prev {
+	position: static;
+	margin: 0 31px;
+}
+
+
+
+/*
+    End This Query
+*/
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991.98px) {
+.comment-area {
+	height: auto;
+}
+
+.filter-search-area .col-lg-2.text-right .justify-content-end {
+	justify-content: left !important;
+}
+.filter-search-area .sec-title.text-center {
+	text-align: left !important;
+	margin-bottom: 0;
+}
+.filter-search-area .col-lg-2.text-right {
+	margin-bottom: 19px;
+}
+.filter-search-box .item .item-box {
+	right: auto;
+	left: 0;
+}
+.profile-header .sm-avatar {
+	position: absolute;
+	top: 30px;
+	right: 182px;
+}
+.header-area.profile-header {
+	padding: 31px 0;
+}
+.profile-header.header-area .navbar {
+	padding: 0;
+	position: static;
+}
+.navbar {
+	padding-bottom: 15px !important;
+}
+.navbar-nav .nav-item .nav-link {
+	padding: 18px 17px;
+	border-bottom: 1px solid #dbdbdb;
+}
+.navbar-nav .nav-item .nav-link::before {
+	top: 21px;
+}
+.navbar-nav {
+	margin-bottom: -9px;
+	border-top: 1px solid #dbdbdb;
+	margin-top: 29px;
+}
+.h-r {
+	border: none;
+	margin-top: 29px;
+}
+.h-r .nav-link {
+	margin-right: 42px;
+	border-bottom: none !important;
+}
+.sec-title.d-flex {
+	display: block !important;
+}
+.app-download-icon {
+	text-align: right;
+}
+.footer-area .footer-bg {
+	height: 40%;
+}
+.footer-area .footer-bg img {
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+.hero-area {
+	padding-top: 78px;
+}
+.header-area .navbar {
+	background: #EEEEEE;
+}
+.sec-title.rel .app-download-icon {
+	left: 0;
+	top: 0;
+}
+.sec-title.rel {
+	position: relative;
+	padding-top: 127px;
+}
+.sec-title.w-200 {
+	width: auto;
+}
+.justify-content-right-lg{
+	justify-content: left;
+}
+
+.box-card-info {
+	height: auto;
+}
+.ccc-card-area .cc-header {
+	text-align: right;
+	padding-right: 24px;
+}
+.blog-list-area .grid-item {
+	width: 100%;
+}
+/*
+    End This Query
+*/
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767.98px) {
+.ccc-card-area .cc-header .icon {
+	position: static;
+	width: 100%;
+	clip-path: none;
+	justify-content: center;
+	padding: 18px 1px;
+	padding-bottom: 0;
+}
+.ccc-card-area .cc-header {
+	padding: 0;
+}
+.ccc-card-area .cc-header {
+	text-align: center;
+}
+.ccc-card-area .cc-header h3 {
+	margin-bottom: 0;
+	padding: 7px 0;
+}
+.justify-content-right-lg {
+	margin-bottom: 13px;
+}
+.profile-header.sm-avatar {
+	right: 162px;
+}
+.step-nav li a {
+	padding: 12px 29px;
+}
+.skill-progress .info .num {
+	font-size: 41px;
+	margin-bottom: 0;
+}
+.inner-bg .bg-shape {
+	height: 50%;
+}
+.newsletter-area {
+	padding: 31px 0;
+}
+.copyright .text-right {
+	text-align: left !important;
+	margin-top: 17px;
+}
+.post-footer .col-lg-6.col-sm-6 {
+	width: 50%;
+}
+.post-footer .sm-i-item {
+	color: #032F3E;
+	padding: 0 5px;
+}
+.post-wrapper {
+	padding: 6px 10px;
+}
+.inner-bg-area .info-box {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.inner-bg-area {
+	text-align: center;
+}
+.add-basket-area {
+	position: relative;
+	margin-right: auto;
+	margin-bottom: 43px;
+	margin-left: auto;
+}
+.add-basket-area .bottom-area,.add-basket-area .confirm-remove-area {
+	right: auto;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.add-basket-area .bottom-area::before,.add-basket-area .confirm-remove-area::before {
+	right: 106px;
+}
+.add-basket-area .bottom-area .footer .right {
+	margin-bottom: 15px;
+	display: inline-block;
+}
+/*
+    End This Query
+*/
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 575.98px) {
+.blog-list-area {
+	margin-left: 0;
+	margin-right: 0;
+}
+.blog-list-area .grid-item {
+	padding-left: 0;
+	padding-right: 0;
+}
+.card-item .card-body::before {
+	height: 95%;
+}
+.profile-header.sm-avatar {
+	right: 56px;
+}
+.profile-header .sm-avatar {
+	right: 58px;
+}
+.step-nav li a {
+	padding: 11px 6px;
+}
+.box-card-info {
+	text-align: center;
+}
+.box-card-info .btn-area {
+	margin-top: 50px;
+	width: 100%;
+}
+.post-area .post-header .post-date {
+	position: static;
+}
+.post-area .post-header {
+	padding-right: 0;
+}
+.post-area .post-header .post-date {
+	margin-left: 107px;
+}
+.post-date .date {
+	display: inline-block;
+}
+.post-area .post-header .post-date .sm-i-item {
+	display: inline-block !important;
+	margin-left: 22px;
+}
+/*
+    End This Query
+*/
+}
+
+/* Small Phone */ 
+@media only screen and (max-width : 480.98px) {
+
+.profile-header .brand {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 32px;
+}
+.profile-header .sm-avatar {
+	right: 7px;
+	top: 100px;
+}
+
+/*
+    End This Query
+*/
+}
+
+/* Small Phone */ 
+@media only screen and (max-width : 360.98px) {
+
+
+
+
+/*
+    End This Query
+*/
+}
+    

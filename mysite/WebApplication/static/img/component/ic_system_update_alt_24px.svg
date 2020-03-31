@@ -1,0 +1,9 @@
+<svg viewBox="0 0 25.516 31.186">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5574f7"/>
+      <stop offset="1" stop-color="#60c3ff"/>
+    </linearGradient>
+  </defs>
+  <path id="ic_system_update_alt_24px" d="M16.593,21.928l5.67-5.67H18.01V3.5H15.175V16.258H10.923ZM29.351,3.5H20.845V6.321h8.505V26.209H3.835V6.321H12.34V3.5H3.835A2.843,2.843,0,0,0,1,6.335V26.181a2.843,2.843,0,0,0,2.835,2.835H29.351a2.843,2.843,0,0,0,2.835-2.835V6.335A2.843,2.843,0,0,0,29.351,3.5Z" transform="translate(29.016 -1) rotate(90)" fill="url(#linear-gradient)"/>
+</svg>

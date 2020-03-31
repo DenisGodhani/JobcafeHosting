@@ -1,0 +1,22 @@
+<svg viewBox="0 0 26.273 26.273">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="26.273" height="26.273" fill="#ffc108" stroke="#ffc108" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_1389" data-name="Group 1389">
+    <g id="Group_1388" data-name="Group 1388" clip-path="url(#clip-path)">
+      <path id="Path_352" data-name="Path 352" d="M25.562,18.4,17.548,3.137C16.5,1.146,14.926,0,13.224,0c-1,0-2.89.41-4.325,3.132L.886,18.4a5.432,5.432,0,0,0-.142,5.4,5.762,5.762,0,0,0,5.144,2.475H20.564A5.762,5.762,0,0,0,25.709,23.8a5.446,5.446,0,0,0-.147-5.4m-5,6.237H5.888c-3.531,0-5.129-2.464-3.547-5.47L10.349,3.9c.788-1.5,1.829-2.254,2.869-2.254S15.3,2.4,16.093,3.9l8.013,15.26c1.582,3.006-.016,5.475-3.547,5.475" transform="translate(-0.087)" fill="#ffc108" stroke="#ffc108" stroke-width="1"/>
+    </g>
+  </g>
+  <g id="Group_1391" data-name="Group 1391">
+    <g id="Group_1390" data-name="Group 1390" clip-path="url(#clip-path)">
+      <path id="Path_353" data-name="Path 353" d="M227.83,359.4a1.23,1.23,0,1,0,1.23,1.23,1.228,1.228,0,0,0-1.23-1.23" transform="translate(-214.693 -340.515)" fill="#ffc108" stroke="#ffc108" stroke-width="1"/>
+    </g>
+  </g>
+  <g id="Group_1393" data-name="Group 1393">
+    <g id="Group_1392" data-name="Group 1392" clip-path="url(#clip-path)">
+      <path id="Path_354" data-name="Path 354" d="M211.725,180.108h2.459l.825-8.208H210.9Z" transform="translate(-199.818 -162.867)" fill="#ffc108" stroke="#ffc108" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

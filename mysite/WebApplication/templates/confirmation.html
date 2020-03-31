@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block header_wrapper %}
+{% with authenticate=True %}
+  {{ block.super }}
+{% endwith%}
+{% endblock header_wrapper%}
+{% block content %}
+{% load static %}
+  <section class="pt-120 pb-120 registration-area">
+    <div class="container">
+      <div class="step-by-step-form">
+        <ul class="step-nav d-flex align-items-center justify-content-center">
+          <li  class="completed "><a href="{% url 'Registration' %}">ACCOUNT</a></li>
+          <li  class="completed"><a href="{% url 'Payment' %}">PAYMENT</a></li>
+          <li class="completed"><a href="{% url 'Confirmation' %}">CONFIRMATION</a></li>
+        </ul>
+        <!--Form Control Start-->
+        <div class="row">
+          <div class="confirmation-page col-lg-8 ml-auto mr-auto">
+              <div class="p-intro">
+                <h5><span class="icon"><img src="{% static 'img/confirmation-icon.svg' %}" alt=""></span>Confirmation of  Your Payment</h5>
+                <p>Dear John, </p>
+                <p>Your payment was successfully processed and here is your Reference Number: </p>
+                <div class="text-center">
+                  <p> Ref. JC2019-2233H</p>
+                </div>
+                <p>Please quote this reference number in your future enquiry. 
+                We also have sent an payment confirmation and tax invoice to your nominated 
+                email address.  </p>
+              </div>
+          </div>
+          <!--Button Group Start-->
+          <div class="col-lg-12 btn-g text-center">
+            <a href="{% url 'TermsConditions' %}" class="btn btn-log btn-icon">
+              <span class="icon">
+                <span class="single-icon">
+                  <svg viewBox="0 0 36.91 30.888"> <defs> <linearGradient x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox"> <stop offset="0" stop-color="#5574f7"/> <stop offset="1" stop-color="#60c3ff"/> </linearGradient> </defs> <g id="Group_13032" data-name="Group 13032" transform="translate(36.91) rotate(90)"> <path id="Path_29560" data-name="Path 29560" d="M9.033,30.888H0L13.4,15.439,0,0H9.042l13.39,15.439Z" transform="translate(0 22.432) rotate(-90)" fill="url(#linear-gradient)"/> <path id="Path_29561" data-name="Path 29561" d="M9.042,30.888H0L13.4,15.439,0,0H9.051l13.39,15.439Z" transform="translate(0 36.91) rotate(-90)" fill="url(#linear-gradient)"/> </g></svg>
+                </span>
+              </span>
+              Continue 
+            </a> 
+          </div>
+          <!--Button Group End-->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--PopUp Price-->
+  {% endblock %}

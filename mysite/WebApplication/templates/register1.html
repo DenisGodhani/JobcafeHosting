@@ -1,0 +1,445 @@
+{% extends 'base.html' %}
+{% block header_wrapper %}
+{% with authenticate=False %}
+{{ block.super }}
+{% endwith%}
+{% endblock header_wrapper%}
+{% block content %}
+{% load static %}
+<section class="pt-120 pb-120 mt-120 registration-area">
+    <div class="container">
+        <div class="step-by-step-form">
+            <ul class="step-nav d-flex align-items-center justify-content-center">
+                <li class="active"><a href="{% url 'Registration' %}">ACCOUNT</a></li>
+                <li><a href="{% url 'Payment' %}">PAYMENT</a></li>
+                <li><a href="{% url 'Confirmation' %}">CONFIRMATION</a></li>
+            </ul>
+            <div class="row">
+                <div class="form-area col-lg-8 ml-auto mr-auto">
+                    <div class="form-fields mt-50">
+                        <h2>Registration</h2>
+                        <form method="POST" action="" id="reg-form">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    {% if form.fullname.value %}
+                                    <div class="form-group focused">
+                                        {% else %}
+                                        <div class="form-group">
+                                            {% endif %}
+                                            <span class="form-label">Full name</span>
+                                            {{ form.fullname }}
+                                            <div class="Err">*Please enter your first name and the family name.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        {% if form.email.value %}
+                                        <div class="form-group focused">
+                                            {% else %}
+                                            <div class="form-group">
+                                                {% endif %}
+                                                <span class="form-label">Email address</span>
+                                                <!-- <input  type="text" id="Name" class="form-input"> -->
+                                                {{ form.email }}
+                                                <div class="Err">*Invalid email address.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            {% if form.password.value %}
+                                            <div class="form-group form-password focused">
+                                                {% else %}
+                                                <div class="form-group form-password">
+                                                    {% endif %}
+                                                    <span class="form-label">Password</span>
+                                                    <!-- <input  type="password" class="form-input"> -->
+                                                    {{ form.password }}
+                                                    <span class="eye">
+                                                        <svg viewBox="0 0 19.066 13">
+                                                            <g id="Group_12613" data-name="Group 12613"
+                                                                transform="translate(-467 -750)">
+                                                                <path id="Exclusion_124" data-name="Exclusion 124"
+                                                                    d="M9.534,13A10.169,10.169,0,0,1,3.7,11.177,10.257,10.257,0,0,1,0,6.5a10.243,10.243,0,0,1,19.066,0,10.257,10.257,0,0,1-3.7,4.677A10.167,10.167,0,0,1,9.534,13Zm0-10.833A4.334,4.334,0,1,0,13.866,6.5,4.338,4.338,0,0,0,9.534,2.166Z"
+                                                                    transform="translate(467 750)" />
+                                                                <path id="Path"
+                                                                    d="M2.6,0A2.6,2.6,0,1,0,5.2,2.6,2.6,2.6,0,0,0,2.6,0Z"
+                                                                    transform="translate(473.933 753.9)" />
+                                                            </g>
+                                                        </svg>
+                                                    </span>
+                                                    <div class="Err">*Password does not meet the criteria.</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                {% if form.cpassword.value %}
+                                                <div class="form-group form-password focused">
+                                                    {% else %}
+                                                    <div class="form-group form-password">
+                                                        {% endif %}
+                                                        <span class="form-label">Confirm password</span>
+                                                        <!-- <input  type="password" class="form-input"> -->
+                                                        {{ form.cpassword }}
+                                                        <span class="eye">
+                                                            <svg viewBox="0 0 19.066 13">
+                                                                <g id="Group_12613" data-name="Group 12613"
+                                                                    transform="translate(-467 -750)">
+                                                                    <path id="Exclusion_124" data-name="Exclusion 124"
+                                                                        d="M9.534,13A10.169,10.169,0,0,1,3.7,11.177,10.257,10.257,0,0,1,0,6.5a10.243,10.243,0,0,1,19.066,0,10.257,10.257,0,0,1-3.7,4.677A10.167,10.167,0,0,1,9.534,13Zm0-10.833A4.334,4.334,0,1,0,13.866,6.5,4.338,4.338,0,0,0,9.534,2.166Z"
+                                                                        transform="translate(467 750)" />
+                                                                    <path id="Path"
+                                                                        d="M2.6,0A2.6,2.6,0,1,0,5.2,2.6,2.6,2.6,0,0,0,2.6,0Z"
+                                                                        transform="translate(473.933 753.9)" />
+                                                                </g>
+                                                            </svg>
+                                                        </span>
+                                                        <div class="Err">*Password does not match.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 text-center mt-50 mb-50">
+                                                <img src="{% static 'img/rec.svg' %}" alt="">
+                                            </div>
+                                            <div class="col-lg-12 mt-40 text-center ">
+                                                <!-- disabled -->
+                                                <button type="submit" class="btn btn-log btn-icon">
+                                                    <span class="icon">
+                                                        <span class="single-icon">
+                                                            <svg viewBox="0 0 36.91 30.888">
+                                                                <defs>
+                                                                    <linearGradient id="linear-gradient" x1="0.5"
+                                                                        x2="0.5" y2="1"
+                                                                        gradientUnits="objectBoundingBox">
+                                                                        <stop offset="0" stop-color="#5574f7" />
+                                                                        <stop offset="1" stop-color="#60c3ff" />
+                                                                    </linearGradient>
+                                                                </defs>
+                                                                <g id="Group_13032" data-name="Group 13032"
+                                                                    transform="translate(36.91) rotate(90)">
+                                                                    <path id="Path_29560" data-name="Path 29560"
+                                                                        d="M9.033,30.888H0L13.4,15.439,0,0H9.042l13.39,15.439Z"
+                                                                        transform="translate(0 22.432) rotate(-90)"
+                                                                        fill="url(#linear-gradient)" />
+                                                                    <path id="Path_29561" data-name="Path 29561"
+                                                                        d="M9.042,30.888H0L13.4,15.439,0,0H9.051l13.39,15.439Z"
+                                                                        transform="translate(0 36.91) rotate(-90)"
+                                                                        fill="url(#linear-gradient)" />
+                                                                </g>
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                    Register me
+                                                </button>
+                                            </div>
+                                            <div class="col-lg-9 mt-50 mb-50 text-center ml-auto mr-auto">
+                                                <p>By clicking Register me, you indicate that you have read and
+                                                    understand
+                                                    our
+                                                    <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a> and
+                                                    represent that you are at least 14 years of age</p>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="password-info">
+                                                    <p>Password must be 8 or more characters, not contain any spaces,
+                                                        and
+                                                        must
+                                                        following below character sets;</p>
+                                                    <ul class="passchecker">
+                                                        <li><span class="checkbox"></span>Uppercase alphabetic
+                                                            characters
+                                                            A-Z
+                                                        </li>
+                                                        <li><span class="checkbox"></span>Lowercase alphabetic
+                                                            characters
+                                                            A-Z
+                                                        </li>
+                                                        <li><span class="checkbox"></span>Numeric characters 0-9</li>
+                                                        <li><span class="checkbox"></span>Special characters #?!@$%&*-
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block javascripts %}
+<script>
+    $(document).ready(function () {
+        console.log('dom is ready');
+
+        $(".Err").each(function () {
+            $(this).hide();
+        });
+
+        $("#reg-form").submit(function (e) {
+            e.preventDefault();
+            var serializedData = $(this).serialize();
+            $.ajax({
+                type: 'POST',
+                url: "{% url 'RegisterUser' %}",
+                data: serializedData,
+                success: function (response) {
+                    if (response.isValid) {
+                        location.href = "{% url 'AccountActivation' %}"
+                    }
+                },
+                error: function (response) {
+                    console.log("Error! something went wrong");
+                }
+            });
+        });
+
+        $('#email').bind('input', function () {
+            var email = $(this).val();
+            if (email) {
+                if (!(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email))) {
+                    $(this).parent().find('.Err').show()
+                    $(this).parent().find('.form-label').css('color', 'red');
+                    $(this).css('box-shadow', '0 1px 0 0 red');
+                }
+                else {
+                    $(this).parent().find('.Err').hide()
+                    $(this).parent().find('.form-label').css('color', 'green');
+                    $(this).css('box-shadow', '0 1px 0 0 green');
+                }
+            }
+            else {
+                $(this).parent().find('.Err').hide()
+                $(this).parent().find('.form-label').css('color', 'black');
+                $(this).css('box-shadow', '0 1px 0 0 black');
+            }
+        });
+
+        $('#fullname').bind('input', function () {
+            var fullname = $(this).val();
+            if (fullname) {
+                if (!(/\s[a-zA-z]/g.test(fullname))) {
+                    $(this).parent().find('.Err').show()
+                    $(this).parent().find('.form-label').css('color', 'red');
+                    $(this).css('box-shadow', '0 1px 0 0 red');
+                }
+                else {
+                    $(this).parent().find('.Err').hide()
+                    $(this).parent().find('.form-label').css('color', 'green');
+                    $(this).css('box-shadow', '0 1px 0 0 green');
+                }
+            }
+            else {
+                $(this).parent().find('.Err').hide()
+                $(this).parent().find('.form-label').css('color', 'black');
+                $(this).css('box-shadow', '0 1px 0 0 black');
+            }
+        });
+
+        $('#cpassword').bind('input', function () {
+            var cpassword = $(this).val();
+            var password = $("#password").val();
+            if (cpassword) {
+                if (cpassword.localeCompare(password)) {
+                    $(this).parent().find('.Err').show()
+                    $(this).parent().find('.form-label').css('color', 'red');
+                    $(this).css('box-shadow', '0 1px 0 0 red');
+                }
+                else {
+                    $(this).parent().find('.Err').hide()
+                    $(this).parent().find('.form-label').css('color', 'green');
+                    $(this).css('box-shadow', '0 1px 0 0 green');
+                }
+
+            } else {
+                $(this).parent().find('.Err').hide()
+                $(this).parent().find('.form-label').css('color', 'black');
+                $(this).css('box-shadow', '0 1px 0 0 black');
+            }
+        });
+
+        $('#password').bind('input', function () {
+            var password = $(this).val();
+            var eleCpassword = $("#cpassword");
+            var cpassword = $(eleCpassword).val();
+            var passcheckerlist = $('.passchecker li');
+            var truesign = "<svg viewBox='0 0 13.629 9.4'><path id='Checkbox' d='M5.4,9.4,0,3.995,1.1,2.9,5.4,7.128,12.533,0l1.1,1.1Z' fill='#fff'/></svg>";
+            var regex = [/[A-Z]/, /[a-z]/, /[0-9]/, /[#?!@$%&*-]/]
+            var flag = 0;
+            if (password) {
+                if (cpassword) {
+                    if (password.localeCompare(cpassword)) {
+                        $(eleCpassword).parent().find('.Err').show()
+                        $(eleCpassword).parent().find('.form-label').css('color', 'red');
+                        $(eleCpassword).css('box-shadow', '0 1px 0 0 red');
+                    }
+                    else {
+                        $(eleCpassword).parent().find('.Err').hide()
+                        $(eleCpassword).parent().find('.form-label').css('color', 'green');
+                        $(eleCpassword).css('box-shadow', '0 1px 0 0 green');
+                    }
+                }
+                for (var i = 0; i < passcheckerlist.length; i++) {
+                    if (password.match(regex[i])) {
+                        if (!$(passcheckerlist[i]).hasClass('active')) {
+                            $(passcheckerlist[i]).addClass('active').children().append(truesign)
+                        }
+                    }
+                    else {
+                        flag = 1;
+                        if ($(passcheckerlist[i]).hasClass('active')) {
+                            $(passcheckerlist[i]).removeClass('active').children().children().remove()
+                        }
+                    }
+                }
+                if (flag) {
+                    $(this).parent().find('.Err').show()
+                    $(this).parent().find('.form-label').css('color', 'red');
+                    $(this).css('box-shadow', '0 1px 0 0 red');
+                }
+                else {
+                    $(this).parent().find('.Err').hide()
+                    $(this).parent().find('.form-label').css('color', 'green');
+                    $(this).css('box-shadow', '0 1px 0 0 green');
+                }
+            }
+            else {
+                $(this).parent().find('.Err').hide()
+                $(this).parent().find('.form-label').css('color', 'black');
+                $(this).css('box-shadow', '0 1px 0 0 black');
+                for (var i = 0; i < passcheckerlist.length; i++) {
+                    if (password.match(regex[i])) {
+                        if (!$(passcheckerlist[i]).hasClass('active')) {
+                            $(passcheckerlist[i]).addClass('active').children().append(truesign)
+                        }
+                    }
+                    else {
+                        if ($(passcheckerlist[i]).hasClass('active')) {
+                            $(passcheckerlist[i]).removeClass('active').children().children().remove()
+                        }
+                    }
+                }
+            }
+        });
+        var NameEle =  $('#fullname');
+        var PassEle =  $('#password');
+        var CPassEle = $('#cpassword');
+        var EmailEle = $('#email');
+        if (EmailEle.val()) {
+            if (!(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(EmailEle.val()))) {
+                $(EmailEle).parent().find('.Err').show()
+                $(EmailEle).parent().find('.form-label').css('color', 'red');
+                $(EmailEle).css('box-shadow', '0 1px 0 0 red');
+            }
+            else {
+                $(EmailEle).parent().find('.Err').hide()
+                $(EmailEle).parent().find('.form-label').css('color', 'green');
+                $(EmailEle).css('box-shadow', '0 1px 0 0 green');
+            }
+        }
+        else {
+            $(EmailEle).parent().find('.Err').hide()
+            $(EmailEle).parent().find('.form-label').css('color', 'black');
+            $(EmailEle).css('box-shadow', '0 1px 0 0 black');
+        }
+        if (NameEle.val()) {
+            if (!(/\s[a-zA-z]/g.test(NameEle.val()))) {
+                $(NameEle).parent().find('.Err').show()
+                $(NameEle).parent().find('.form-label').css('color', 'red');
+                $(NameEle).css('box-shadow', '0 1px 0 0 red');
+            }
+            else {
+                $(NameEle).parent().find('.Err').hide()
+                $(NameEle).parent().find('.form-label').css('color', 'green');
+                $(NameEle).css('box-shadow', '0 1px 0 0 green');
+            }
+        }
+        else {
+            $(NameEle).parent().find('.Err').hide()
+            $(NameEle).parent().find('.form-label').css('color', 'black');
+            $(NameEle).css('box-shadow', '0 1px 0 0 black');
+        }
+        if ($(PassEle).val()) {
+            var password = $(PassEle).val();
+            var cpassword = $(CPassEle).val();
+            var passcheckerlist = $('.passchecker li');
+            var truesign = "<svg viewBox='0 0 13.629 9.4'><path id='Checkbox' d='M5.4,9.4,0,3.995,1.1,2.9,5.4,7.128,12.533,0l1.1,1.1Z' fill='#fff'/></svg>";
+            var regex = [/[A-Z]/, /[a-z]/, /[0-9]/, /[#?!@$%&*-]/]
+            var flag = 0;
+            if (password) {
+                if (cpassword) {
+                    if (password.localeCompare(cpassword)) {
+                        $(CPassEle).parent().find('.Err').show()
+                        $(CPassEle).parent().find('.form-label').css('color', 'red');
+                        $(CPassEle).css('box-shadow', '0 1px 0 0 red');
+                    }
+                    else {
+                        $(CPassEle).parent().find('.Err').hide()
+                        $(CPassEle).parent().find('.form-label').css('color', 'green');
+                        $(CPassEle).css('box-shadow', '0 1px 0 0 green');
+                    }
+                }
+                for (var i = 0; i < passcheckerlist.length; i++) {
+                    if (password.match(regex[i])) {
+                        if (!$(passcheckerlist[i]).hasClass('active')) {
+                            $(passcheckerlist[i]).addClass('active').children().append(truesign)
+                        }
+                    }
+                    else {
+                        flag = 1;
+                        if ($(passcheckerlist[i]).hasClass('active')) {
+                            $(passcheckerlist[i]).removeClass('active').children().children().remove()
+                        }
+                    }
+                }
+                if (flag) {
+                    $(PassEle).parent().find('.Err').show()
+                    $(PassEle).parent().find('.form-label').css('color', 'red');
+                    $(PassEle).css('box-shadow', '0 1px 0 0 red');
+                }
+                else {
+                    $(PassEle).parent().find('.Err').hide()
+                    $(PassEle).parent().find('.form-label').css('color', 'green');
+                    $(PassEle).css('box-shadow', '0 1px 0 0 green');
+                }
+            }
+        }
+        else {
+            $(PassEle).parent().find('.Err').hide()
+            $(PassEle).parent().find('.form-label').css('color', 'black');
+            $(PassEle).css('box-shadow', '0 1px 0 0 black');
+            for (var i = 0; i < passcheckerlist.length; i++) {
+                if (password.match(regex[i])) {
+                    if (!$(passcheckerlist[i]).hasClass('active')) {
+                        $(passcheckerlist[i]).addClass('active').children().append(truesign)
+                    }
+                }
+                else {
+                    if ($(passcheckerlist[i]).hasClass('active')) {
+                        $(passcheckerlist[i]).removeClass('active').children().children().remove()
+                    }
+                }
+            }
+        }
+        if (CPassEle.val()) {
+            var password = $(PassEle).val();
+            var cpassword = $(CPassEle).val();
+            if (cpassword.localeCompare(password)) {
+                $(CPassEle).parent().find('.Err').show()
+                $(CPassEle).parent().find('.form-label').css('color', 'red');
+                $(CPassEle).css('box-shadow', '0 1px 0 0 red');
+            }
+            else {
+                $(CPassEle).parent().find('.Err').hide()
+                $(CPassEle).parent().find('.form-label').css('color', 'green');
+                $(CPassEle).css('box-shadow', '0 1px 0 0 green');
+            }
+        }
+        else {
+            $(CPassEle).parent().find('.Err').hide()
+            $(CPassEle).parent().find('.form-label').css('color', 'black');
+            $(CPassEle).css('box-shadow', '0 1px 0 0 black');
+        }
+    });
+</script>
+{% endblock %}

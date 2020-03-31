@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% block header_wrapper %}
+{% with authenticate=True %}
+  {{ block.super }}
+{% endwith%}
+{% endblock header_wrapper%}
+{% block content %}
+{% load static %}
+<section class="pt-120 pb-120 registration-area">
+  <div class="container">
+    <div class="step-by-step-form">
+      <ul class="step-nav d-flex align-items-center justify-content-center">
+        <li class="active"><a href="{% url 'Registration' %}">ACCOUNT</a></li>
+        <li><a href="{% url 'Payment' %}">PAYMENT</a></li>
+        <li><a href="{% url 'Confirmation' %}">CONFIRMATION</a></li>
+      </ul>
+      <div class="row">
+        <div class="form-area col-lg-8 ml-auto mr-auto">
+          {% if Error %}
+          <div class="alert alert-danger mt-30" role="alert">
+            {{ Message }}
+          </div>
+          {% endif %}
+          <div class="form-fields text-center mt-50">
+            <h2>Registration</h2>
+            <h5>Your privacy is important to us. </h5>
+            <div class="p-intro">
+              <p>We have sent a verification code to your email address. Enter the verification code below. </p>
+              <p>Dear Mehdi,</p>
+            </div>
+          </div>
+          <!--Button Group Start-->
+          <form action="" method="POST" class="text-center">
+            <div class="text-center">
+              <div class="input-field d-inline-block input-text-bg">
+                <input class="form-input w-auto text-center" type="text" placeholder="Enter code here" name="Ucode">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-log btn-icon">
+              <span class="icon">
+                <span class="single-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.645 39.484">
+                    <g id="Group_14683" data-name="Group 14683" transform="translate(-1183.006 -784.066)">
+                      <rect id="Rectangle_2039" data-name="Rectangle 2039" width="22.645" height="22.645"
+                        transform="translate(1184.506 799.404)" fill="none" stroke="#3b86ff" stroke-miterlimit="10"
+                        stroke-width="3" />
+                      <path id="Path_29601" data-name="Path 29601"
+                        d="M242.028,141.75h0a6.928,6.928,0,0,0-6.928,6.928v6.911h13.839v-6.911a6.928,6.928,0,0,0-6.911-6.928Z"
+                        transform="translate(953.8 643.816)" fill="none" stroke="#3b86ff" stroke-miterlimit="10"
+                        stroke-width="3" />
+                      <line id="Line_256" data-name="Line 256" y2="7.263" transform="translate(1195.828 808.362)"
+                        fill="none" stroke="#1585d8" stroke-linejoin="round" stroke-width="3" />
+                    </g>
+                  </svg>
+                </span>
+              </span>
+              Verify
+            </button>
+            <a class="code-send" href="#">Send code again</a>
+          </form>
+          <!--Button Group End-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--PopUp Price-->
+<!-- Modal -->
+<div class="modal fade" id="Price_popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered lg-modal" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">
+          <span class="icon">
+            <svg viewBox="0 0 26.214 26.988">
+              <g id="two-straight-arrows-square-shape-of-exchange" transform="translate(-1.75)">
+                <path id="Path_10038" data-name="Path 10038"
+                  d="M1.75,4.6A4.592,4.592,0,0,0,4.759,8.937v14.2a.873.873,0,0,0,.774.8H12.28l-1.04.841a1.123,1.123,0,0,0-.42.863,1.308,1.308,0,0,0,.42.951,1.386,1.386,0,0,0,1,.4,1.406,1.406,0,0,0,1-.42C16.7,23.1,16.7,23.073,16.7,23.073a1.431,1.431,0,0,0,.376-1.062,1.4,1.4,0,0,0-.465-.951c0-.022-3.385-3.385-3.385-3.385a1.416,1.416,0,0,0-2.411,1,1.511,1.511,0,0,0,.42,1.039l1.04,1.106H8.762a.675.675,0,0,1-.686-.686V8.849a4.806,4.806,0,0,0,2.9-4.269A4.579,4.579,0,0,0,6.373,0,4.631,4.631,0,0,0,1.75,4.6ZM6.373,2.809A1.792,1.792,0,1,1,4.582,4.6,1.784,1.784,0,0,1,6.373,2.809Z"
+                  fill="#fff" />
+                <path id="Path_10039" data-name="Path 10039"
+                  d="M66.505,22.465a4.652,4.652,0,0,0-3.075-4.336V3.927a.692.692,0,0,0-.641-.73H56.02l1.04-.863a1.168,1.168,0,0,0,.42-.885A1.308,1.308,0,0,0,57.06.5a1.387,1.387,0,0,0-1-.4,1.407,1.407,0,0,0-1,.42L51.618,3.971a1.431,1.431,0,0,0-.376,1.062,1.4,1.4,0,0,0,.465.951l3.385,3.385a1.407,1.407,0,0,0,1,.42,1.387,1.387,0,0,0,1-.4,1.408,1.408,0,0,0,.42-1,1.46,1.46,0,0,0-.42-1.018L56.02,6.294h3.54c.376,0,.553.243.553.619V18.2a4.746,4.746,0,0,0-2.831,4.269,4.579,4.579,0,0,0,4.6,4.579A4.626,4.626,0,0,0,66.505,22.465Zm-4.557,1.792a1.792,1.792,0,1,1,1.792-1.792A1.785,1.785,0,0,1,61.948,24.257Z"
+                  transform="translate(-38.542 -0.078)" fill="#fff" />
+              </g>
+            </svg>
+          </span>
+          Change payment plan
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row pricing-area pricing-row">
+          <!--Price Item-->
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="pricing-item">
+              <div class="pricing-top">
+                <h5>BASIC</h5>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="pricing-center">
+                <div class="top-info">
+                  <h2>$99.99</h2>
+                  <span>per annum</span>
+                </div>
+                <p>Individual License restricted to personal use only </p>
+              </div>
+              <div class="checkbox checkbox-bg text-center">
+                <label class="actives">
+                  <input type="checkbox" checked="" class="filled"><span class="checkbox-material"><span
+                      class="check"></span></span>Select
+                </label>
+              </div>
+            </div>
+          </div>
+          <!--Price Item-->
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="pricing-item">
+              <div class="pricing-top">
+                <h5>PROFESSIONAL</h5>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="pricing-center">
+                <div class="top-info">
+                  <h2>$149.99</h2>
+                  <span>per annum</span>
+                </div>
+                <p>Individual License restricted to personal use only </p>
+              </div>
+              <div class="checkbox checkbox-bg text-center">
+                <label class="actives">
+                  <input type="checkbox" checked="" class="filled"><span class="checkbox-material"><span
+                      class="check"></span></span>Select
+                </label>
+              </div>
+            </div>
+          </div>
+          <!--Price Item-->
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="pricing-item">
+              <div class="pricing-top">
+                <h5>Premium</h5>
+                <p>$189.99</p>
+              </div>
+              <div class="pricing-center">
+                <div class="top-info">
+                  <h2>$99.99</h2>
+                  <span>per annum</span>
+                </div>
+                <p>Individual License restricted to personal use only </p>
+              </div>
+              <div class="checkbox checkbox-bg text-center">
+                <label class="actives">
+                  <input type="checkbox" checked="" class="filled"><span class="checkbox-material"><span
+                      class="check"></span></span>Select
+                </label>
+              </div>
+            </div>
+          </div>
+          <!--End-->
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <a href="pyment-2.html" class="btn btn-pri">Save changes</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

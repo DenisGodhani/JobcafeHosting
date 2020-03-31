@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="136.823" height="44.039" viewBox="0 0 136.823 44.039">
+  <g id="Group_13084" data-name="Group 13084" transform="translate(-1413 -6372.117)">
+    <path id="Shape" d="M136.823,37.7c0,3.907-3.054,6.336-7.207,6.336H7.524A7.311,7.311,0,0,1,0,36.963V7.074A7.31,7.31,0,0,1,7.524,0H129.617a7.034,7.034,0,0,1,7.207,7.074V37.7Z" transform="translate(1413 6372.117)" fill="#010101"/>
+    <text id="Available_on_the_" data-name="Available on the " transform="translate(1456 6389)" fill="#fff" font-size="9" font-family="ArialMT, Arial" letter-spacing="0.03em"><tspan x="0" y="0">Available on the </tspan></text>
+    <text id="Mac_App_Store" data-name="Mac App Store" transform="translate(1456 6404)" fill="#fff" font-size="11" font-family="Arial-BoldMT, Arial" font-weight="700" letter-spacing="-0.01em"><tspan x="0" y="0">Mac App Store</tspan></text>
+    <g id="Group_13067" data-name="Group 13067" transform="translate(1417.763 6378.651)">
+      <path id="Path_11274" data-name="Path 11274" d="M25.113,0H6.357A6.354,6.354,0,0,0,0,6.357v18.76A6.354,6.354,0,0,0,6.357,31.47h18.76a6.357,6.357,0,0,0,6.357-6.357V6.357A6.36,6.36,0,0,0,25.113,0Z" transform="translate(0)" fill="#fff"/>
+      <path id="Path_11275" data-name="Path 11275" d="M118.008,139.264l.637-1.1a1.434,1.434,0,0,1,2.486,1.432l-6.141,10.629h4.441a1.965,1.965,0,0,1,1.621,2.864H108.032a1.432,1.432,0,1,1,0-2.864h3.65l4.673-8.1L114.9,139.59a1.434,1.434,0,0,1,2.486-1.432l.625,1.105Zm-5.523,15.3-1.377,2.388a1.434,1.434,0,1,1-2.486-1.432l1.023-1.77a2.451,2.451,0,0,1,2.84.814Zm11.856-4.331h3.725a1.432,1.432,0,0,1,0,2.864H126l1.4,2.423a1.434,1.434,0,1,1-2.486,1.432q-3.529-6.119-5.291-9.166a3.961,3.961,0,0,1,.5-4.85q1.41,2.419,4.221,7.3Z" transform="translate(-102.407 -132.034)" fill="#032f3e"/>
+    </g>
+  </g>
+</svg>

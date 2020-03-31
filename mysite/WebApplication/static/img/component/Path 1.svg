@@ -1,0 +1,9 @@
+<svg viewBox="0 0 28.836 28.985">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5574f7"/>
+      <stop offset="1" stop-color="#60c3ff"/>
+    </linearGradient>
+  </defs>
+  <path id="Path_1" data-name="Path 1" d="M27.122,25.362H18.065a3.623,3.623,0,1,1-7.246,0H1.761A1.74,1.74,0,0,1,.13,24.094,1.934,1.934,0,0,1,.674,22.1a7.293,7.293,0,0,0,2.9-5.8V10.869a10.869,10.869,0,0,1,21.739,0V16.3a7.293,7.293,0,0,0,2.9,5.8,1.715,1.715,0,0,1,.543,1.993A1.74,1.74,0,0,1,27.122,25.362Z" transform="translate(-0.063)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+</svg>

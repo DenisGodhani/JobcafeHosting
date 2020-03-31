@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="136.823" height="40.762" viewBox="0 0 136.823 40.762">
+  <g id="Group_13083" data-name="Group 13083" transform="translate(-1413 -6320.791)">
+    <path id="Shape" d="M136.823,34.9c0,3.616-3.054,5.864-7.207,5.864H7.524C3.37,40.762,0,37.83,0,34.213V6.548C0,2.932,3.369,0,7.524,0H129.617c4.153,0,7.207,2.932,7.207,6.548V34.9Z" transform="translate(1413 6320.791)" fill="#010101"/>
+    <g id="Group_13066" data-name="Group 13066" transform="translate(1417.324 6321.384)">
+      <g id="Group_13065" data-name="Group 13065">
+        <path id="Path_11273" data-name="Path 11273" d="M26.246,11.006v-.868A7.928,7.928,0,0,0,23.7,4.172a8.317,8.317,0,0,1,1.25,4.445v2.389h-1.3V8.617c0-4.093-2.8-7.412-6.245-7.412s-6.245,3.318-6.245,7.412v2.389H1V37.07a2.63,2.63,0,0,0,2.379,2.823H31.438a2.63,2.63,0,0,0,2.379-2.823V11.006ZM12.457,8.617c0-3.246,2.216-5.877,4.951-5.876,2.71.07,4.892,2.66,4.951,5.876v2.389H15.05v-.868c0-3.245,2.216-5.877,4.951-5.876a3.971,3.971,0,0,1,.681.06,4.115,4.115,0,0,0-1.975-.516,4.756,4.756,0,0,0-4.032,2.467,8.422,8.422,0,0,0-.919,3.865v.869h-1.3Z" transform="translate(-1 -1.205)" fill="#fff"/>
+        <g id="Group_13064" data-name="Group 13064" transform="translate(9.036 17.217)">
+          <rect id="Rectangle_24674" data-name="Rectangle 24674" width="6.805" height="6.805" fill="#f25022"/>
+          <rect id="Rectangle_24675" data-name="Rectangle 24675" width="6.805" height="6.805" transform="translate(7.939)" fill="#7fba00"/>
+          <rect id="Rectangle_24676" data-name="Rectangle 24676" width="6.805" height="6.805" transform="translate(0 7.939)" fill="#00a4ef"/>
+          <rect id="Rectangle_24677" data-name="Rectangle 24677" width="6.805" height="6.805" transform="translate(7.939 7.939)" fill="#ffb900"/>
+        </g>
+      </g>
+    </g>
+    <text id="Get_it_from_" data-name="Get it from " transform="translate(1456 6336)" fill="#fff" font-size="9" font-family="ArialMT, Arial" letter-spacing="0.03em"><tspan x="0" y="0">Get it from </tspan></text>
+    <text id="Microsoft_Store" data-name="Microsoft Store" transform="translate(1456 6351)" fill="#fff" font-size="11" font-family="Arial-BoldMT, Arial" font-weight="700" letter-spacing="-0.01em"><tspan x="0" y="0">Microsoft Store</tspan></text>
+  </g>
+</svg>

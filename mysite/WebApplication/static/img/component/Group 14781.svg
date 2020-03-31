@@ -1,0 +1,12 @@
+<svg viewBox="0 0 48.41 48.407">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5574f7"/>
+      <stop offset="1" stop-color="#60c3ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_14781" data-name="Group 14781" transform="translate(-751.015 -1157.3)">
+    <path id="Op_component_1" data-name="Op component 1" d="M1044.128,528.1a3.02,3.02,0,0,1-.887,2.14l-9.076,9.076a3.025,3.025,0,0,1-4.279-4.278l6.938-6.938-6.937-6.938a3.025,3.025,0,0,1,4.279-4.278l9.076,9.077A3.017,3.017,0,0,1,1044.128,528.1Z" transform="translate(1303.323 146.453) rotate(90)" fill="url(#linear-gradient)"/>
+    <path id="Op_component_2" data-name="Op component 2" d="M1071.407,536.2a24.2,24.2,0,1,1-24.2-24.2A24.232,24.232,0,0,1,1071.407,536.2Zm-42.356,0a18.153,18.153,0,1,0,18.152-18.153A18.173,18.173,0,0,0,1029.051,536.2Z" transform="translate(1311.425 134.3) rotate(90)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
