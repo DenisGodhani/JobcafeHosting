@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -24,7 +24,7 @@ SECRET_KEY = '%^bcm^&)_90rjew!stpmxw)_ng5elzod_h=l4%o8ja04$8ecs+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['45.63.29.220']
 
 
 # Application definition
@@ -149,7 +149,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # EMAIL_HOST = 'smtp.mailtrap.io'
 # EMAIL_HOST_USER = '81914ea0d96889'
@@ -165,10 +165,3 @@ EMAIL_USE_TLS = True
 FAIL_SILENTLY = False
 # EMAIL_BACKEND = 'djcelery_email.backends.CeleryEmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-# Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
-
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
