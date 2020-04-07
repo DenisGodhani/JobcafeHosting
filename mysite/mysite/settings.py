@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'widget_tweaks',
-    'djcelery_email'
 ]
 
 MIDDLEWARE = [
@@ -122,8 +121,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # For RabbitMQ
-BROKER_URL = 'amqp://localhost'
-CELERY_RESULT_BACKEND = 'amqp://localhost'
+BROKER_URL = 'amqp://45.63.29.220'
+CELERY_RESULT_BACKEND = 'amqp://45.63.29.220'
 # Celery Data Format
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'

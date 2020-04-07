@@ -1,12 +1,17 @@
 {% extends 'base.html' %}
 {% block header_wrapper %}
-{% with authenticate=True %}
-  {{ block.super }}
+{% with authenticate=False %}
+{{ block.super }}
 {% endwith%}
 {% endblock header_wrapper%}
 {% block content %}
 {% load static %}
-<section class="pt-120 pb-120 registration-area">
+<div class="text-center" id="Message" style="position: absolute;z-index: 2;width: 100%;">
+  <div class="alert alert-success resend-email-message" role="alert">
+    We have sent you an email for verification please verify it.
+  </div>
+</div>
+<section class="pt-120 pb-120 registration-area mt-120">
   <div class="container">
     <div class="step-by-step-form">
       <ul class="step-nav d-flex align-items-center justify-content-center">
@@ -26,14 +31,14 @@
             <h5>Your privacy is important to us. </h5>
             <div class="p-intro">
               <p>We have sent a verification code to your email address. Enter the verification code below. </p>
-              <p>Dear Mehdi,</p>
+              <p>Dear {{ request.session.CurrentUserName }},</p>
             </div>
           </div>
           <!--Button Group Start-->
           <form action="" method="POST" class="text-center">
             <div class="text-center">
               <div class="input-field d-inline-block input-text-bg">
-                <input class="form-input w-auto text-center" type="text" placeholder="Enter code here" name="Ucode">
+                <input class="form-input w-auto text-center" type="text" placeholder="verification code" name="Ucode">
               </div>
             </div>
             <button type="submit" class="btn btn-log btn-icon">
@@ -56,7 +61,7 @@
               </span>
               Verify
             </button>
-            <a class="code-send" href="#">Send code again</a>
+            <a href="#Message" class="code-send" id="resend">Send code again</a>
           </form>
           <!--Button Group End-->
         </div>
@@ -167,4 +172,37 @@
     </div>
   </div>
 </div>
+{% endblock %}
+{% block javascripts %}
+<script>
+  $('.resend-email-message').hide();
+
+  $("a").on('click', function (event) {
+
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $.ajax({
+        type: 'GET',
+        url: "{% url 'resend_code' %}",
+        success: function (response) {
+          console.log("Email Sent Successfully");
+          $('.resend-email-message').show();
+          $('.resend-email-message').delay(4000).fadeOut('slow');
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+            window.location.hash = hash;
+          });
+        },
+        error: function (response) {
+          console.log(response);
+          console.log("Error! something went wrong");
+        }
+      });
+    }
+  });
+</script>
 {% endblock %}

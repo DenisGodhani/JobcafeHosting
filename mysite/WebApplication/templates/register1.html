@@ -16,6 +16,9 @@
             </ul>
             <div class="row">
                 <div class="form-area col-lg-8 ml-auto mr-auto">
+                    <div class="alert alert-danger mb-0" role="alert">
+                        Email already existed!
+                      </div>
                     <div class="form-fields mt-50">
                         <h2>Registration</h2>
                         <form method="POST" action="" id="reg-form">
@@ -169,6 +172,7 @@
 {% endblock %}
 {% block javascripts %}
 <script>
+    $('.alert-danger').hide();
     $(document).ready(function () {
         console.log('dom is ready');
 
@@ -186,6 +190,9 @@
                 success: function (response) {
                     if (response.isValid) {
                         location.href = "{% url 'AccountActivation' %}"
+                    }
+                    else{
+                        $('.alert-danger').show();
                     }
                 },
                 error: function (response) {
