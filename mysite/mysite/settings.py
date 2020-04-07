@@ -24,7 +24,7 @@ SECRET_KEY = '%^bcm^&)_90rjew!stpmxw)_ng5elzod_h=l4%o8ja04$8ecs+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['45.63.29.220']
+ALLOWED_HOSTS = ['45.63.29.220','127.0.0.1']
 
 
 # Application definition
@@ -121,8 +121,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # For RabbitMQ
-BROKER_URL = 'amqp://45.63.29.220'
-CELERY_RESULT_BACKEND = 'amqp://45.63.29.220'
+BROKER_URL = 'amqp://localhost'
+CELERY_RESULT_BACKEND = 'amqp://localhost'
 # Celery Data Format
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
