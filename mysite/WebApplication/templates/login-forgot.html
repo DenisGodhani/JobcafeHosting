@@ -20,7 +20,7 @@
             <h4 class="fw-500">Enter your email address.</h4>
           </div>
           <form action="" method="POST" id="login-forgot-form">
-            <div class="alert alert-danger" role="alert">
+            <div class="alert alert-danger" role="alert" style="display: none;">
               Email doesn't exist.
             </div>
             <div class="input-field">
@@ -76,7 +76,6 @@
 {% block javascripts %}
 <script>
   $(document).ready(function () {
-    $('.alert-danger').hide();
     $("#login-forgot-form").submit(function (e) {
       e.preventDefault();
       var serializedData = $(this).serialize();

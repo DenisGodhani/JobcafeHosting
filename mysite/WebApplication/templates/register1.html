@@ -16,7 +16,7 @@
             </ul>
             <div class="row">
                 <div class="form-area col-lg-8 ml-auto mr-auto">
-                    <div class="alert alert-danger mb-0" role="alert">
+                    <div class="alert alert-danger mb-0" role="alert" style="display: none;">
                         Email already existed!
                       </div>
                     <div class="form-fields mt-50">
@@ -32,7 +32,7 @@
                                             {% endif %}
                                             <span class="form-label">Full name</span>
                                             {{ form.fullname }}
-                                            <div class="Err">*Please enter your first name and the family name.
+                                            <div class="Err" style="display: none;">*Please enter your first name and the family name.
                                             </div>
                                         </div>
                                     </div>
@@ -45,7 +45,7 @@
                                                 <span class="form-label">Email address</span>
                                                 <!-- <input  type="text" id="Name" class="form-input"> -->
                                                 {{ form.email }}
-                                                <div class="Err">*Invalid email address.
+                                                <div class="Err" style="display: none;">*Invalid email address.
                                                 </div>
                                             </div>
                                         </div>
@@ -71,7 +71,7 @@
                                                             </g>
                                                         </svg>
                                                     </span>
-                                                    <div class="Err">*Password does not meet the criteria.</div>
+                                                    <div class="Err" style="display: none;">*Password does not meet the criteria.</div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
@@ -96,7 +96,7 @@
                                                                 </g>
                                                             </svg>
                                                         </span>
-                                                        <div class="Err">*Password does not match.</div>
+                                                        <div class="Err" style="display: none;">*Password does not match.</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -172,13 +172,8 @@
 {% endblock %}
 {% block javascripts %}
 <script>
-    $('.alert-danger').hide();
     $(document).ready(function () {
         console.log('dom is ready');
-
-        $(".Err").each(function () {
-            $(this).hide();
-        });
 
         $("#reg-form").submit(function (e) {
             e.preventDefault();

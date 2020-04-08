@@ -18,7 +18,7 @@
             <h2>USER LOGIN</h2>
             <p>Welcome back</p>
           </div>
-          <div class="alert alert-danger" role="alert">
+          <div class="alert alert-danger" role="alert" style="display: none;">
             Username or password does not match.
           </div>
           <form action="" method="POST" id="login-form">
@@ -119,8 +119,6 @@
 {% block javascripts %}
 <script>
   $(document).ready(function () {
-    console.log($("input[type='checkbox']").val());
-    $('.alert-danger').hide();
     $("#login-form").submit(function (e) {
       e.preventDefault();
       var serializedData = $(this).serialize();

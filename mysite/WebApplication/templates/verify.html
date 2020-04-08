@@ -7,7 +7,7 @@
 {% block content %}
 {% load static %}
 <div class="text-center" id="Message" style="position: absolute;z-index: 2;width: 100%;">
-  <div class="alert alert-success resend-email-message" role="alert">
+  <div class="alert alert-success resend-email-message" role="alert" style="display: none;">
     We have sent you an email for verification please verify it.
   </div>
 </div>
@@ -175,7 +175,6 @@
 {% endblock %}
 {% block javascripts %}
 <script>
-  $('.resend-email-message').hide();
 
   $("a").on('click', function (event) {
 
@@ -188,7 +187,6 @@
         type: 'GET',
         url: "{% url 'resend_code' %}",
         success: function (response) {
-          console.log("Email Sent Successfully");
           $('.resend-email-message').show();
           $('.resend-email-message').delay(4000).fadeOut('slow');
           $('html, body').animate({

@@ -21,7 +21,7 @@
           <!-- Form Input Field Start -->
           <form action="" method="POST" id="login-forgot-new-form">
             {% csrf_token %}
-            <div class="alert alert-danger" role="alert">
+            <div class="alert alert-danger" role="alert" style="display: none;">
               password and confirm password should be matched!
             </div>
             <div class="input-field">
@@ -128,7 +128,6 @@
 {% block javascripts %}
 <script>
   $(document).ready(function () {
-    $('.alert-danger').hide();
     var flag = 1;
     $('#NewPassword').bind('input', function () {
       var password = $(this).val();
